@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0212" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>💜 Día de las Flores Moradas 💜</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <canvas id="jardin"></canvas>
+
+  <div class="marco"></div>
+
+  <!-- Encabezado -->
+  <header class="encabezado">
+    <div class="corona">💜</div>
+    <h1>Feliz Día de las Flores Moradas</h1>
+    <p class="subtitulo">Un jardín hecho para ti</p>
+    <p class="mensaje" id="mensaje">Toca cada flor 💜</p>
+  </header>
+
+  <!-- Contador -->
+  <div class="contador">
+    <svg class="anillo" viewBox="0 0 60 60">
+      <circle class="anillo-fondo" cx="30" cy="30" r="26"></circle>
+      <circle class="anillo-progreso" id="anillo" cx="30" cy="30" r="26"></circle>
+    </svg>
+    <div class="contador-info">
+      <span id="contadorNum">0</span>
+      <span class="contador-label">/ 0</span>
+    </div>
+  </div>
+
+  <!-- Botón flotante para abrir panel -->
+  <button class="btn-panel" id="btnPanel" aria-label="Ver mensajes">
+    💜
+    <span class="badge" id="badge">0</span>
+  </button>
+
+  <!-- Backdrop -->
+  <div class="backdrop" id="backdrop"></div>
+
+  <!-- Panel de mensajes con fotos -->
+  <aside class="panel-mensajes" id="panelMensajes">
+    <div class="panel-handle"></div>
+    <div class="panel-header">
+      <div class="panel-titulo">
+        💜 <span>Tus mensajes</span>
+      </div>
+      <button class="panel-cerrar" id="panelCerrar" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="panel-lista" id="panelLista">
+      <div class="panel-vacio" id="panelVacio">
+        <div class="vacio-emoji">🌷</div>
+        <p>Toca las flores del jardín y aquí aparecerán tus mensajes con fotos 💜</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Modal ampliado de foto individual -->
+  <div class="modal-foto" id="modalFoto">
+    <div class="modal-foto-contenido">
+      <button class="cerrar-foto" id="cerrarFoto">✕</button>
+      <div class="foto-grande">
+        <img id="fotoGrandeImg" src="" alt="Recuerdo" />
+      </div>
+      <div class="foto-mensaje" id="fotoMensaje"></div>
+    </div>
+  </div>
+
+  <!-- Botón principal -->
+  <button class="btn-mensaje" id="btnMensaje">
+    <span class="btn-brillo"></span>
+    💌 <span class="btn-texto">Mensaje final</span>
+  </button>
+
+
+  <div class="modal" id="modal">
+    <div class="modal-contenido">
+      <button class="cerrar" id="cerrar">✕</button>
+      <div class="modal-deco-top">✦ ❀ ✦</div>
+      <div class="modal-icono">💜🌷💜</div>
+      <h2>Para ti, en este día especial</h2>
+      <p>
+        Las flores moradas representan la <strong>magia</strong>, la
+        <strong>serenidad</strong> y el <strong>amor profundo</strong>.
+        Hoy quiero regalarte este pequeño jardín hecho con cada uno de mis
+        pensamientos hacia ti.
+      </p>
+      <p class="firma">
+        Que cada flor morada te recuerde lo especial que eres.
+        <br>🌸 Con cariño  para ti🌸
+      </p>
+      <div class="modal-deco-bottom">✦ ❀ ✦</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
